@@ -1,7 +1,8 @@
 use actix_web::{
-    App, HttpResponse, HttpServer, Responder, cookie::time::error::Format, get, post, web,
+    App, HttpResponse, HttpServer, Responder, /* cookie::time::error::Format, */ get, post,
+    web,
 };
-use reqwest::{Response, Url};
+use reqwest::{/* Response, */ Url};
 use std::time::Duration;
 
 #[get("/")]
