@@ -3,5 +3,18 @@ name = "finance-binance-getaway"
 version = "0.1.0"
 edition = "2024"
 
+[[bin]]
+name = "finance-binance-getaway"
+path = "src/main.rs"
+
 [dependencies]
 actix-web = "4.9.0"
+chrono = "0.4.40"
+env_logger = "0.11.6"
+exitfailure = "0.5.1"
+log = "0.4.26"
+reqwest = { version = "0.12.12", features = ["json"] }
+serde = { version = "1.0.218", features = ["derive"] }
+serde_json = "1.0.80"
+structopt = "0.3.26"
+tokio = { version = "1.43.0", features = ["full"] }
