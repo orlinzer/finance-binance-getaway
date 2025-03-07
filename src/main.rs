@@ -1,4 +1,4 @@
-use actix_web::{get, post, /* web, */ App, HttpResponse, HttpServer, Responder};
+use actix_web::{/* web, */ App, HttpResponse, HttpServer, Responder, get, post};
 
 #[get("/")]
 async fn hello() -> impl Responder {
@@ -45,11 +45,11 @@ async fn healthcheck() -> impl Responder {
 // }
 
 // pub fn init(config: &mut web::ServiceConfig) {
-  // config.service(
-  //     web::scope("")
-  //         .service(index)
-  //         .service(healthcheck)
-  // );
+// config.service(
+//     web::scope("")
+//         .service(index)
+//         .service(healthcheck)
+// );
 // }
 
 #[actix_web::main]
@@ -59,7 +59,7 @@ async fn main() -> std::io::Result<()> {
             // .configure(init)
             .service(hello)
             .service(echo)
-            // .route("/hey", web::get().to(manual_hello))
+        // .route("/hey", web::get().to(manual_hello))
     })
     .bind("0.0.0.0:4000")?
     .run()
